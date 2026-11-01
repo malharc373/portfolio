@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IoT-IDS — Edge Intrusion Detection · Malhar Falke</title>
+<meta name="description" content="A small flow-based model that detects 9 attack types on constrained hardware, plus a cross-dataset transfer study over 11 public IDS datasets.">
+<meta property="og:title" content="IoT-IDS — Edge Intrusion Detection · Malhar Falke">
+<meta property="og:description" content="A small flow-based model that detects 9 attack types on constrained hardware, plus a cross-dataset transfer study over 11 public IDS datasets.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0f6b62">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap nav">
+  <a class="brand" href="../index.html">Malhar<span>.</span>Falke</a>
+  <ul id="nav-list"><li><a href="../index.html">Home</a></li><li><a href="../about.html">About</a></li><li><a href="../experience.html">Experience</a></li><li><a href="../projects.html" aria-current="page">Projects</a></li><li><a href="../racing.html">Racing</a></li><li><a href="../skills.html">Skills</a></li><li><a href="../resume.html">Resume</a></li><li><a href="../contact.html">Contact</a></li></ul>
+  <div class="nav-tools">
+    <button class="icon-btn" id="theme-btn" aria-label="Toggle colour theme">☾</button>
+    <button class="icon-btn menu-btn" id="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-list">☰</button>
+  </div>
+</div></header>
+<main id="main">
+<div class="page-head"><div class="wrap">
+ <div class="crumb"><a href="../projects.html">← All projects</a></div>
+ <div class="eyebrow">2026 – Present · Personal research project</div><h1>IoT-IDS — Edge Intrusion Detection</h1><p class="lede">A small flow-based model that detects 9 attack types on constrained hardware, plus a cross-dataset transfer study over 11 public IDS datasets.</p>
+ <ul class="tags tag-lg"><li>Python</li><li>XGBoost</li><li>ONNX</li><li>scapy</li><li>C</li></ul><div class="hero-actions"><a class="btn" href="https://github.com/malharc373/IoT_IDS">View on GitHub ↗</a> </div></div></div>
+<section><div class="wrap prose"><dl class="facts"><div><dt>Attack types</dt><dd>9 in 4 categories</dd></div><div><dt>Model size</dt><dd>91.8 KB ONNX</dd></div><div><dt>Inference</dt><dd>8.1 µs / flow (M4)</dd></div><div><dt>Datasets</dt><dd>11 public</dd></div></dl><h2>Two deliberately separate halves</h2><p><strong>1. Live edge IDS/IPS.</strong> A streaming sensor that sniffs traffic, aggregates packets into bidirectional flows, classifies each flow with a 22-feature model, and reports aggregated per-source incidents. The same model compiles to a dependency-free C header (~43 KB) for microcontrollers, inference only so far.<br><br><strong>2. SFAF cross-dataset study.</strong> A semantic feature-alignment framework over eleven public IDS datasets (CICIDS2017, UNSW-NB15, TON-IoT, Bot-IoT and others) aligned into one feature space to measure how well flow behaviour transfers between labs, devices and tools. It surfaced severe domain shift.</p><h2>Being straight about limits</h2><ul class='points'><li>Active blocking is deliberately disabled on real networks because the first live baseline produced unsafe false positives; the response module runs dry-run.</li><li>An earlier cross-dataset diagonal turned out to be resubstitution (train and test were the same rows). The corrected held-out protocol is implemented, and headline numbers are withheld until the full study is rerun.</li><li>The Raspberry Pi 4 target and the end-to-end microcontroller path are not yet validated.</li></ul>
+<div class="pager"><a href="aarthfit.html">← AarthFit — MSME Financial Fitness Platform</a><a href="ev-daq.html">Data Acquisition System for a Formula Student EV →</a></div></div></section>
+</main>
+<footer><div class="wrap foot">
+  <div>© 2026 Malhar Falke. Pune, India.</div>
+  <nav aria-label="Social"><a href="https://github.com/malharc373">GitHub</a><a href="https://linkedin.com/in/malhar-falke-660987291">LinkedIn</a><a href="mailto:falkemalhar388@gmail.com">Email</a><a href="../assets/docs/Malhar_Falke_Resume.pdf">Resume</a></nav>
+</div></footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

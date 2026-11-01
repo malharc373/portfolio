@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://malharc373.github.io/portfolio/sitemap.xml

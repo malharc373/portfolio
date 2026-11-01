@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forest Biomass Mapping — Estonia · Malhar Falke</title>
+<meta name="description" content="Satellite-fusion model that produced Estonia&#x27;s national 2023 above-ground biomass map, validated with spatial-block cross-validation.">
+<meta property="og:title" content="Forest Biomass Mapping — Estonia · Malhar Falke">
+<meta property="og:description" content="Satellite-fusion model that produced Estonia&#x27;s national 2023 above-ground biomass map, validated with spatial-block cross-validation.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0f6b62">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap nav">
+  <a class="brand" href="../index.html">Malhar<span>.</span>Falke</a>
+  <ul id="nav-list"><li><a href="../index.html">Home</a></li><li><a href="../about.html">About</a></li><li><a href="../experience.html">Experience</a></li><li><a href="../projects.html" aria-current="page">Projects</a></li><li><a href="../racing.html">Racing</a></li><li><a href="../skills.html">Skills</a></li><li><a href="../resume.html">Resume</a></li><li><a href="../contact.html">Contact</a></li></ul>
+  <div class="nav-tools">
+    <button class="icon-btn" id="theme-btn" aria-label="Toggle colour theme">☾</button>
+    <button class="icon-btn menu-btn" id="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-list">☰</button>
+  </div>
+</div></header>
+<main id="main">
+<div class="page-head"><div class="wrap">
+ <div class="crumb"><a href="../projects.html">← All projects</a></div>
+ <div class="eyebrow">May 2026 – Present · ML & Data Science Intern, Klimaforge</div><h1>Forest Biomass Mapping — Estonia</h1><p class="lede">Satellite-fusion model that produced Estonia's national 2023 above-ground biomass map, validated with spatial-block cross-validation.</p>
+ <ul class="tags tag-lg"><li>Python</li><li>XGBoost</li><li>Sentinel-1 SAR</li><li>Sentinel-2</li><li>Google Earth Engine</li><li>openEO</li><li>CDSE</li><li>PyTorch</li></ul><div class="hero-actions"></div></div></div>
+<section><div class="wrap prose"><dl class="facts"><div><dt>Samples</dt><dd>~678k</dd></div><div><dt>Features</dt><dd>48 engineered</dd></div><div><dt>Held-out R²</dt><dd>0.61</dd></div><div><dt>Spatial-block R²</dt><dd>0.50</dd></div></dl><h2>The problem</h2><p>Estimate above-ground forest biomass (t/ha) across Estonia from freely available satellite data, without relying on LiDAR.</p><h2>What I built</h2><ul class='points'><li>A model on ~678k samples and 48 engineered features fused from Sentinel-1 SAR, Sentinel-2 multispectral and terrain data (elevation, slope, aspect), with seasonal composites.</li><li>XGBoost reached R² 0.61 (RMSE 28.7 t/ha) on a held-out split and 0.58 cross-validated; the deployed model produced the national 2023 biomass map.</li><li>A later 31-feature fusion model reached cross-validated R² 0.64 on 658k samples.</li><li>Automated satellite data acquisition and preprocessing with Google Earth Engine, the Copernicus Data Space Ecosystem and openEO.</li></ul><h2>Honest validation</h2><p>Random splits overstate accuracy when neighbouring pixels are correlated. I re-evaluated under 10 km spatial-block cross-validation (R² 0.50), and that became the reported benchmark.<table><tr><th>Sensor set (spatial blocking)</th><th>R²</th></tr><tr><td>Sentinel-1 only</td><td>0.32</td></tr><tr><td>Sentinel-2 only</td><td>0.47</td></tr><tr><td>S1 + S2</td><td>0.52</td></tr><tr><td>S1 + S2 + ALOS L-band</td><td>0.55</td></tr></table>Each sensor adds signal and none replaces the others.</p><h2>Negative results that mattered</h2><ul class='points'><li>Benchmarked the Prithvi-EO-2.0 geospatial foundation model, fine-tuned and as frozen embeddings. It underperformed engineered features at every training size, so the classical model shipped.</li><li>Caught and discarded a canopy-height feature that leaked the target (R² 1.00).</li><li>Tested a log-target variant (R² 0.53) and did not deploy it.</li></ul>
+<div class="pager"><a href="hr-tool.html">← HR Tool for an Accounting Firm</a><a href="aarthfit.html">AarthFit — MSME Financial Fitness Platform →</a></div></div></section>
+</main>
+<footer><div class="wrap foot">
+  <div>© 2026 Malhar Falke. Pune, India.</div>
+  <nav aria-label="Social"><a href="https://github.com/malharc373">GitHub</a><a href="https://linkedin.com/in/malhar-falke-660987291">LinkedIn</a><a href="mailto:falkemalhar388@gmail.com">Email</a><a href="../assets/docs/Malhar_Falke_Resume.pdf">Resume</a></nav>
+</div></footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

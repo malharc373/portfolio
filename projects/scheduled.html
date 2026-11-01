@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scheduled — Natural-Language Calendar · Malhar Falke</title>
+<meta name="description" content="macOS menu-bar app that turns plain English into Apple Calendar events and Reminders that sync across devices.">
+<meta property="og:title" content="Scheduled — Natural-Language Calendar · Malhar Falke">
+<meta property="og:description" content="macOS menu-bar app that turns plain English into Apple Calendar events and Reminders that sync across devices.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0f6b62">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap nav">
+  <a class="brand" href="../index.html">Malhar<span>.</span>Falke</a>
+  <ul id="nav-list"><li><a href="../index.html">Home</a></li><li><a href="../about.html">About</a></li><li><a href="../experience.html">Experience</a></li><li><a href="../projects.html" aria-current="page">Projects</a></li><li><a href="../racing.html">Racing</a></li><li><a href="../skills.html">Skills</a></li><li><a href="../resume.html">Resume</a></li><li><a href="../contact.html">Contact</a></li></ul>
+  <div class="nav-tools">
+    <button class="icon-btn" id="theme-btn" aria-label="Toggle colour theme">☾</button>
+    <button class="icon-btn menu-btn" id="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-list">☰</button>
+  </div>
+</div></header>
+<main id="main">
+<div class="page-head"><div class="wrap">
+ <div class="crumb"><a href="../projects.html">← All projects</a></div>
+ <div class="eyebrow">2026 · Personal project</div><h1>Scheduled — Natural-Language Calendar</h1><p class="lede">macOS menu-bar app that turns plain English into Apple Calendar events and Reminders that sync across devices.</p>
+ <ul class="tags tag-lg"><li>Swift</li><li>SwiftUI</li><li>AppKit</li><li>EventKit</li><li>OpenRouter</li></ul><div class="hero-actions"><a class="btn" href="https://github.com/malharc373/Scheduled">View on GitHub ↗</a> </div></div></div>
+<section><div class="wrap prose"><dl class="facts"><div><dt>Platform</dt><dd>macOS 14+</dd></div><div><dt>Sync</dt><dd>iCloud via EventKit</dd></div><div><dt>Hotkey</dt><dd>⌘⌃J</dd></div><div><dt>Also</dt><dd>CLI for Raycast / cron</dd></div></dl><h2>How it works</h2><p>Type something like “lecture tomorrow at 2pm for 2 hours” or “move my dentist appointment to 4pm”. An LLM returns structured JSON, which is written to the system EventKit store, the same store iCloud already syncs. No custom backend and no polling.</p><h2>Details</h2><ul class='points'><li>Native alarms through EKAlarm on iPhone, iPad, Mac and Watch.</li><li>Current date, time and timezone are sent to the model as ground truth for accurate relative dates.</li><li>Builds with Command Line Tools only; the same binary doubles as a CLI.</li></ul>
+<div class="pager"><a href="securevault.html">← SecureVault — Secrets Management API</a><a href="rtt-monitor.html">RTT Monitor — Passive TCP Latency →</a></div></div></section>
+</main>
+<footer><div class="wrap foot">
+  <div>© 2026 Malhar Falke. Pune, India.</div>
+  <nav aria-label="Social"><a href="https://github.com/malharc373">GitHub</a><a href="https://linkedin.com/in/malhar-falke-660987291">LinkedIn</a><a href="mailto:falkemalhar388@gmail.com">Email</a><a href="../assets/docs/Malhar_Falke_Resume.pdf">Resume</a></nav>
+</div></footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

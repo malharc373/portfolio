@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ExperimentGuard — A/B Test Decision Engine · Malhar Falke</title>
+<meta name="description" content="Validates randomisation, measures uplift with confidence intervals, checks guardrails and issues an explainable ship / no-ship call.">
+<meta property="og:title" content="ExperimentGuard — A/B Test Decision Engine · Malhar Falke">
+<meta property="og:description" content="Validates randomisation, measures uplift with confidence intervals, checks guardrails and issues an explainable ship / no-ship call.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0f6b62">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap nav">
+  <a class="brand" href="../index.html">Malhar<span>.</span>Falke</a>
+  <ul id="nav-list"><li><a href="../index.html">Home</a></li><li><a href="../about.html">About</a></li><li><a href="../experience.html">Experience</a></li><li><a href="../projects.html" aria-current="page">Projects</a></li><li><a href="../racing.html">Racing</a></li><li><a href="../skills.html">Skills</a></li><li><a href="../resume.html">Resume</a></li><li><a href="../contact.html">Contact</a></li></ul>
+  <div class="nav-tools">
+    <button class="icon-btn" id="theme-btn" aria-label="Toggle colour theme">☾</button>
+    <button class="icon-btn menu-btn" id="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-list">☰</button>
+  </div>
+</div></header>
+<main id="main">
+<div class="page-head"><div class="wrap">
+ <div class="crumb"><a href="../projects.html">← All projects</a></div>
+ <div class="eyebrow">2026 · Personal project</div><h1>ExperimentGuard — A/B Test Decision Engine</h1><p class="lede">Validates randomisation, measures uplift with confidence intervals, checks guardrails and issues an explainable ship / no-ship call.</p>
+ <ul class="tags tag-lg"><li>Python</li><li>Pandas</li><li>SciPy</li><li>FastAPI</li><li>Docker</li><li>GitHub Actions</li></ul><div class="hero-actions"><a class="btn" href="https://github.com/malharc373/ExperimentGuard">View on GitHub ↗</a> </div></div></div>
+<section><div class="wrap prose"><dl class="facts"><div><dt>Domain</dt><dd>Fintech payment flows</dd></div><div><dt>Output</dt><dd>Ship / Do not ship / Continue</dd></div><div><dt>CI</dt><dd>GitHub Actions</dd></div><div><dt>Serving</dt><dd>FastAPI + Docker</dd></div></dl><h2>What it protects against</h2><table><tr><th>Module</th><th>Guards against</th></tr><tr><td>Sample size / MDE</td><td>Running an underpowered test</td></tr><tr><td>SRM check</td><td>Trusting effects behind broken randomisation</td></tr><tr><td>Uplift + CI</td><td>Calling noise a win</td></tr><tr><td>Bootstrap CI</td><td>Assuming normality on heavy-tailed money</td></tr><tr><td>Guardrails</td><td>Shipping a conversion win that hurts reliability</td></tr><tr><td>Segments + BH correction</td><td>False positives from slicing</td></tr><tr><td>Decision engine</td><td>Ad-hoc, unexplainable ship calls</td></tr></table><h2>Design stance</h2><p>A detected sample-ratio mismatch is treated as an automatic Do-not-ship, and every recommendation comes with the rules that produced it.</p>
+<div class="pager"><a href="ev-daq.html">← Data Acquisition System for a Formula Student EV</a><a href="payment-pulse-lab.html">UPI Reliability & Growth Intelligence →</a></div></div></section>
+</main>
+<footer><div class="wrap foot">
+  <div>© 2026 Malhar Falke. Pune, India.</div>
+  <nav aria-label="Social"><a href="https://github.com/malharc373">GitHub</a><a href="https://linkedin.com/in/malhar-falke-660987291">LinkedIn</a><a href="mailto:falkemalhar388@gmail.com">Email</a><a href="../assets/docs/Malhar_Falke_Resume.pdf">Resume</a></nav>
+</div></footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

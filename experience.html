@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Experience · Malhar Falke</title>
+<meta name="description" content="Internship and research experience in geospatial ML and embedded systems.">
+<meta property="og:title" content="Experience · Malhar Falke">
+<meta property="og:description" content="Internship and research experience in geospatial ML and embedded systems.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0f6b62">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap nav">
+  <a class="brand" href="index.html">Malhar<span>.</span>Falke</a>
+  <ul id="nav-list"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="experience.html" aria-current="page">Experience</a></li><li><a href="projects.html">Projects</a></li><li><a href="racing.html">Racing</a></li><li><a href="skills.html">Skills</a></li><li><a href="resume.html">Resume</a></li><li><a href="contact.html">Contact</a></li></ul>
+  <div class="nav-tools">
+    <button class="icon-btn" id="theme-btn" aria-label="Toggle colour theme">☾</button>
+    <button class="icon-btn menu-btn" id="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-list">☰</button>
+  </div>
+</div></header>
+<main id="main">
+<div class="page-head"><div class="wrap"><div class="eyebrow">Experience</div><h1>Where I've worked</h1></div></div>
+<section><div class="wrap prose">
+<ul class="timeline">
+<li class="reveal"><div class="tl-head"><h3>Machine Learning &amp; Data Science Intern</h3><span class="when">May 2026 – Present</span></div>
+<div class="org">Klimaforge · Norway (Remote) · Geospatial machine learning</div>
+<ul class="points"><li>Built an above-ground forest biomass model for Estonia on ~678k samples and 48 engineered features fused from Sentinel-1 SAR, Sentinel-2 multispectral and terrain data, with seasonal composites.</li><li>XGBoost reached R² 0.61 (RMSE 28.7 t/ha) held-out and 0.58 cross-validated; the deployed model produced the national 2023 biomass map. A later 31-feature model reached cross-validated R² 0.64 on 658k samples.</li><li>Re-evaluated under 10 km spatial-block cross-validation (R² 0.50) to measure how much random splits overstate accuracy; this became the reported benchmark.</li><li>Ran sensor ablations under spatial blocking (S1 0.32, S2 0.47, S1+S2 0.52, S1+S2+ALOS L-band 0.55).</li><li>Benchmarked the Prithvi-EO-2.0 foundation model; it underperformed engineered features at every training size, so the classical model shipped.</li><li>Caught and discarded a canopy-height feature that leaked the target (R² 1.00).</li><li>Automated satellite data acquisition and preprocessing with Google Earth Engine, CDSE and openEO.</li></ul>
+<ul class="tags"><li>XGBoost</li><li>Sentinel-1/2</li><li>Google Earth Engine</li><li>openEO</li><li>Python</li></ul>
+<p style="margin-top:14px"><a href="projects/forest-biomass.html">Read the full case study →</a></p></li>
+
+<li class="reveal"><div class="tl-head"><h3>Embedded Systems Research Fellow</h3><span class="when">Jun 2025 – Aug 2025</span></div>
+<div class="org">COEP Technological University · Pune · Under faculty supervision</div>
+<ul class="points"><li>Implemented SPI, I²C, UART, Bluetooth and Zigbee on PIC and ARM7 / Cortex-M microcontroller targets.</li><li>Wrote firmware for peripheral interfacing: graphical LCD, SPI TFT LCD and PWM-based motor control.</li><li>Studied and implemented the FreeRTOS and µC/OS-II real-time operating systems.</li><li>Authored self-learning modules (print and video) for Embedded C and Embedded Linux, and prepared lesson plans of tested experiments for PIC controllers.</li></ul>
+<ul class="tags"><li>C</li><li>FreeRTOS</li><li>µC/OS-II</li><li>ARM Cortex-M</li><li>PIC</li></ul></li>
+
+<li class="reveal"><div class="tl-head"><h3>E-Powertrain Engineer &amp; DAQ Lead</h3><span class="when">Oct 2023 – May 2026</span></div>
+<div class="org">Team Octane Racing Electric (Formula Student) · COEP</div>
+<p>Embedded and data-acquisition work for the team's electric race cars. <a href="racing.html">See the racing page →</a></p></li>
+</ul>
+<div class="pager"><a href="projects.html">See projects →</a><a href="assets/docs/Malhar_Falke_CV.pdf">Download full CV</a></div>
+</div></section>
+</main>
+<footer><div class="wrap foot">
+  <div>© 2026 Malhar Falke. Pune, India.</div>
+  <nav aria-label="Social"><a href="https://github.com/malharc373">GitHub</a><a href="https://linkedin.com/in/malhar-falke-660987291">LinkedIn</a><a href="mailto:falkemalhar388@gmail.com">Email</a><a href="assets/docs/Malhar_Falke_Resume.pdf">Resume</a></nav>
+</div></footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
